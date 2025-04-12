@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web99 - Đơn Vị Thiết Kế Website Uy Tín</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Be Vietnam Pro Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            color: #0B2A49;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #0B2A49 0%, #1E5F74 100%);
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: #1E5F74;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .section-title-center:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .service-card {
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+        }
+        
+        .advantage-item {
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .advantage-item:hover {
+            background-color: #e9ecef;
+            transform: translateY(-3px);
+        }
+        
+        .process-card {
+            position: relative;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            background-color: white;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .process-card:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .process-number {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 40px;
+            height: 40px;
+            background-color: #1E5F74;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .commit-card {
+            text-align: center;
+            padding: 25px 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .commit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .commit-icon {
+            font-size: 2.5rem;
+            color: #1E5F74;
+            margin-bottom: 15px;
+        }
+        
+        .contact-section {
+            background-color: #f8f9fa;
+        }
+        
+        .contact-info i {
+            color: #1E5F74;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            background-color: #0B2A49;
+            color: white;
+            padding: 30px 0;
+        }
+        
+        .btn-primary {
+            background-color: #1E5F74;
+            border-color: #1E5F74;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0B2A49;
+            border-color: #0B2A49;
+        }
+        
+        .top-bar {
+            background-color: #0B2A49;
+            padding: 8px 0;
+            color: white;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: #0B2A49;
+            font-size: 1.5rem;
+        }
+        
+        .nav-link {
+            color: #333;
+            font-weight: 500;
+            margin: 0 10px;
+        }
+        
+        .nav-link:hover {
+            color: #1E5F74;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar d-none d-md-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <small><i class="fas fa-envelope"></i> lap@web99vn.com | <i class="fas fa-phone"></i> (+84) 87 9191 789</small>
+                </div>
+                <div class="col-md-4 text-end">
+                    <small><i class="fab fa-facebook"></i> <i class="fab fa-linkedin ms-2"></i> <i class="fab fa-twitter ms-2"></i> <i class="fab fa-instagram ms-2"></i></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Web<span style="color: #1E5F74;">99</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Giới Thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Dịch Vụ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#advantages">Ưu Điểm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#process">Quy Trình</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#commitment">Cam Kết</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Liên Hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Web99 - Đơn Vị Thiết Kế Website Uy Tín</h1>
+                    <p class="lead mb-4">Giải pháp số toàn diện cho doanh nghiệp của bạn</p>
+                    <div class="d-flex gap-3">
+                        <a href="#contact" class="btn btn-light btn-lg">Liên Hệ Ngay</a>
+                        <a href="#services" class="btn btn-outline-light btn-lg">Dịch Vụ</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="https://placehold.co/600x400" alt="Web99 Hero Image" class="img-fluid rounded-3 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-5" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://placehold.co/600x400" alt="About Web99" class="img-fluid rounded-3 shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">Giới Thiệu Web99</h2>
+                    <p>Web99 là đơn vị chuyên nghiệp trong lĩnh vực thiết kế website, phát triển thương mại điện tử và cung cấp giải pháp số toàn diện cho doanh nghiệp. Chúng tôi cam kết mang đến những sản phẩm số chất lượng cao, được tối ưu hóa cho từng nhu cầu kinh doanh cụ thể của khách hàng.</p>
+                    <div class="mt-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-check-circle me-3" style="color: #1E5F74; font-size: 1.5rem;"></i>
+                            <div>
+                                <h5 class="mb-0">Chuyên nghiệp</h5>
+                                <p class="mb-0">Đội ngũ thiết kế và lập trình viên dày dặn kinh nghiệm</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-check-circle me-3" style="color: #1E5F74; font-size: 1.5rem;"></i>
+                            <div>
+                                <h5 class="mb-0">Hiện đại</h5>
+                                <p class="mb-0">Áp dụng công nghệ tiên tiến nhất trong phát triển website</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-check-circle me-3" style="color: #1E5F74; font-size: 1.5rem;"></i>
+                            <div>
+                                <h5 class="mb-0">Tận tâm</h5>
+                                <p class="mb-0">Hỗ trợ khách hàng 24/7 với dịch vụ chăm sóc chuyên nghiệp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5 bg-light" id="services">
+        <div class="container">
+            <h2 class="section-title section-title-center text-center">Dịch Vụ Nổi Bật</h2>
+            <p class="text-center mb-5">Web99 cung cấp đa dạng giải pháp website với nhiều mẫu giao diện hiện đại, tính năng linh hoạt phù hợp cho mọi loại hình doanh nghiệp</p>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card">
+                        <img src="https://placehold.co/400x300" class="card-img-top" alt="Website giới thiệu doanh nghiệp">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-building me-2" style="color: #1E5F74;"></i>Website Doanh Nghiệp</h5>
+                            <p class="card-text">Website giới thiệu doanh nghiệp tạo ấn tượng mạnh mẽ với đối tác</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card">
+                        <img src="https://placehold.co/400x300" class="card-img-top" alt="Website bán hàng">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-shopping-cart me-2" style="color: #1E5F74;"></i>Website Bán Hàng</h5>
+                            <p class="card-text">Website bán hàng trực tuyến tối ưu tỷ lệ chuyển đổi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card">
+                        <img src="https://placehold.co/400x300" class="card-img-top" alt="Website nhà hàng">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-utensils me-2" style="color: #1E5F74;"></i>Website Nhà Hàng</h5>
+                            <p class="card-text">Website nhà hàng thu hút và giữ chân thực khách</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card">
+                        <img src="https://placehold.co/400x300" class="card-img-top" alt="Website tin tức">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-newspaper me-2" style="color: #1E5F74;"></i>Website Tin Tức</h5>
+                            <p class="card-text">Website tin tức cập nhật thông tin nhanh chóng</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card">
+                        <img src="https://placehold.co/400x300" class="card-img-top" alt="Website bất động sản">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-home me-2" style="color: #1E5F74;"></i>Website Bất Động Sản</h5>
+                            <p class="card-text">Website bất động sản trưng bày dự án chuyên nghiệp</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card">
+                        <img src="https://placehold.co/400x300" class="card-img-top" alt="Website du lịch">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-umbrella-beach me-2" style="color: #1E5F74;"></i>Website Du Lịch</h5>
+                            <p class="card-text">Website du lịch và resort tạo trải nghiệm đặt phòng trực tuyến</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="py-5" id="advantages">
+        <div class="container">
+            <h2 class="section-title section-title-center text-center">Ưu Điểm Vượt Trội</h2>
+            <div class="row mt-5">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="advantage-item h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-mobile-alt me-3" style="color: #1E5F74; font-size: 2rem;"></i>
+                            <h5 class="mb-0">Thiết kế responsive đa nền tảng</h5>
+                        </div>
+                        <p class="mb-0">Hiển thị hoàn hảo trên mọi thiết bị</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="advantage-item h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-search me-3" style="color: #1E5F74; font-size: 2rem;"></i>
+                            <h5 class="mb-0">Tối ưu SEO từ gốc</h5>
+                        </div>
+                        <p class="mb-0">Dễ dàng được tìm thấy trên Google, Bing</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="advantage-item h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-cog me-3" style="color: #1E5F74; font-size: 2rem;"></i>
+                            <h5 class="mb-0">Hệ thống quản trị dễ sử dụng</h5>
+                        </div>
+                        <p class="mb-0">Người dùng không cần kiến thức lập trình</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="advantage-item h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-sliders-h me-3" style="color: #1E5F74; font-size: 2rem;"></i>
+                            <h5 class="mb-0">Tùy biến linh hoạt</h5>
+                        </div>
+                        <p class="mb-0">Dễ dàng mở rộng, bổ sung tính năng</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="advantage-item h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-language me-3" style="color: #1E5F74; font-size: 2rem;"></i>
+                            <h5 class="mb-0">Hỗ trợ đa ngôn ngữ</h5>
+                        </div>
+                        <p class="mb-0">Tiếp cận khách hàng toàn cầu</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="advantage-item h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-tachometer-alt me-3" style="color: #1E5F74; font-size: 2rem;"></i>
+                            <h5 class="mb-0">Tốc độ tải trang nhanh</h5>
+                        </div>
+                        <p class="mb-0">Tối ưu trải nghiệm người dùng</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="advantage-item h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-shield-alt me-3" style="color: #1E5F74; font-size: 2rem;"></i>
+                            <h5 class="mb-0">Bảo mật cao</h5>
+                        </div>
+                        <p class="mb-0">Bảo vệ dữ liệu và thông tin khách hàng</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="advantage-item h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-headset me-3" style="color: #1E5F74; font-size: 2rem;"></i>
+                            <h5 class="mb-0">Hỗ trợ 24/7</h5>
+                        </div>
+                        <p class="mb-0">Đội ngũ chuyên viên luôn sẵn sàng hỗ trợ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-5 bg-light" id="process">
+        <div class="container">
+            <h2 class="section-title section-title-center text-center">Quy Trình Thiết Kế Website Chuyên Nghiệp</h2>
+            <div class="row mt-5">
+                <div class="col-lg-6 mb-4">
+                    <div class="process-card">
+                        <div class="process-number">1</div>
+                        <h4>Tư Vấn & Phân Tích Yêu Cầu</h4>
+                        <ul class="ps-3">
+                            <li>Tiếp nhận và phân tích nhu cầu từ khách hàng</li>
+                            <li>Tư vấn các tính năng phù hợp với mô hình kinh doanh</li>
+                            <li>Lập kế hoạch triển khai chi tiết</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="process-card">
+                        <div class="process-number">2</div>
+                        <h4>Đăng Ký Tên Miền & Hosting</h4>
+                        <ul class="ps-3">
+                            <li>Tư vấn lựa chọn tên miền phù hợp với thương hiệu</li>
+                            <li>Cung cấp giải pháp hosting ổn định, tốc độ cao</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="process-card">
+                        <div class="process-number">3</div>
+                        <h4>Thiết Kế Giao Diện</h4>
+                        <ul class="ps-3">
+                            <li>Thiết kế theo mẫu có sẵn hoặc tùy biến hoàn toàn mới</li>
+                            <li>Đảm bảo phù hợp với nhận diện thương hiệu</li>
+                            <li>Tối ưu trải nghiệm người dùng (UX/UI)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="process-card">
+                        <div class="process-number">4</div>
+                        <h4>Xây Dựng Tính Năng</h4>
+                        <ul class="ps-3">
+                            <li>Phát triển các chức năng theo yêu cầu đã thống nhất</li>
+                            <li>Tích hợp các công cụ marketing hiệu quả</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="process-card">
+                        <div class="process-number">5</div>
+                        <h4>Kiểm Thử Toàn Diện</h4>
+                        <ul class="ps-3">
+                            <li>Đánh giá website trên nhiều thiết bị và trình duyệt</li>
+                            <li>Đảm bảo mọi tính năng hoạt động hoàn hảo</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="process-card">
+                        <div class="process-number">6</div>
+                        <h4>Hoàn Thiện & Triển Khai</h4>
+                        <ul class="ps-3">
+                            <li>Hoàn thiện sản phẩm theo phản hồi</li>
+                            <li>Triển khai website lên môi trường thực tế</li>
+                            <li>Bàn giao source code đầy đủ</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="process-card">
+                        <div class="process-number">7</div>
+                        <h4>Đào Tạo & Hỗ Trợ</h4>
+                        <ul class="ps-3">
+                            <li>Hướng dẫn sử dụng hệ thống quản trị</li>
+                            <li>Cung cấp tài liệu hướng dẫn chi tiết</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="process-card">
+                        <div class="process-number">8</div>
+                        <h4>Bảo Trì & Phát Triển</h4>
+                        <ul class="ps-3">
+                            <li>Đăng ký website với các công cụ tìm kiếm</li>
+                            <li>Hỗ trợ kỹ thuật dài hạn</li>
+                            <li>Nâng cấp tính năng theo nhu cầu</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section class="py-5" id="commitment">
+        <div class="container">
+            <h2 class="section-title section-title-center text-center">Cam Kết Của Web99</h2>
+            <div class="row mt-5 g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="commit-card">
+                        <i class="fas fa-users-cog commit-icon"></i>
+                        <h4>Đội Ngũ Chuyên Nghiệp</h4>
+                        <p>Sản phẩm được phát triển bởi đội ngũ thiết kế và lập trình có nhiều kinh nghiệm, liên tục học hỏi và tìm kiếm giải pháp tối ưu cho khách hàng.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="commit-card">
+                        <i class="fas fa-lightbulb commit-icon"></i>
+                        <h4>Sáng Tạo & Đam Mê</h4>
+                        <p>Mỗi thành viên Web99 đều là chuyên gia trong lĩnh vực của mình - thân thiện, giàu cảm hứng sáng tạo và có động lực làm việc mạnh mẽ.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="commit-card">
+                        <i class="fas fa-dollar-sign commit-icon"></i>
+                        <h4>Giải Pháp Tối Ưu Chi Phí</h4>
+                        <p>Web99 giúp doanh nghiệp tiết kiệm thời gian và ngân sách bằng cách đưa ra các gói dịch vụ phù hợp, tư vấn tận tình.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="commit-card">
+                        <i class="fas fa-handshake commit-icon"></i>
+                        <h4>Quan Hệ Hợp Tác Lâu Dài</h4>
+                        <p>Web99 không chỉ thiết kế website mà còn xây dựng mối quan hệ hợp tác tin cậy dài lâu. Chính sách hỗ trợ, hậu mãi tạo niềm tin vững chắc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white text-center">
+        <div class="container">
+            <h2 class="mb-4">Bạn Đã Sẵn Sàng Với Website Mới?</h2>
+            <p class="lead mb-4">Hãy liên hệ ngay với Web99 để được tư vấn giải pháp website tối ưu cho doanh nghiệp của bạn. Chúng tôi sẵn sàng lắng nghe và đồng hành cùng sự phát triển của doanh nghiệp bạn trong không gian số.</p>
+            <a href="#contact" class="btn btn-light btn-lg">Liên Hệ Ngay</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5 contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title section-title-center text-center">Thông Tin Liên Hệ</h2>
+            <div class="row mt-5">
+                <div class="col-lg-5">
+                    <div class="contact-info">
+                        <div class="mb-4">
+                            <h5><i class="fas fa-phone-alt"></i> Điện thoại</h5>
+                            <p>(+84) 87 9191 789</p>
+                        </div>
+                        <div class="mb-4">
+                            <h5><i class="fab fa-whatsapp"></i> Zalo</h5>
+                            <p>087 9191 789</p>
+                        </div>
+                        <div class="mb-4">
+                            <h5><i class="fas fa-envelope"></i> Email</h5>
+                            <p>lap@web99vn.com</p>
+                        </div>
+                        <div class="mb-4">
+                            <h5><i class="fas fa-globe"></i> Website</h5>
+                            <p>https://web99vn.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7">
+                    <form class="p-4 bg-white rounded-3 shadow">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Họ và tên</label>
+                                <input type="text" class="form-control" id="name" placeholder="Nhập họ và tên">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Số điện thoại</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Nhập số điện thoại">
+                            </div>
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Nhập địa chỉ email">
+                            </div>
+                            <div class="col-12">
+                                <label for="subject" class="form-label">Tiêu đề</label>
+                                <input type="text" class="form-control" id="subject" placeholder="Nhập tiêu đề">
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Nội dung</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Nhập nội dung liên hệ"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">Gửi Liên Hệ</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4 class="mb-4">Web99</h4>
+                    <p>Đơn vị thiết kế website chuyên nghiệp, mang đến những giải pháp số tối ưu cho doanh nghiệp của bạn.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4 class="mb-4">Liên Kết Nhanh</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#about" class="text-white text-decoration-none">Giới Thiệu</a></li>
+                        <li class="mb-2"><a href="#services" class="text-white text-decoration-none">Dịch Vụ</a></li>
+                        <li class="mb-2"><a href="#advantages" class="text-white text-decoration-none">Ưu Điểm</a></li>
+                        <li class="mb-2"><a href="#process" class="text-white text-decoration-none">Quy Trình</a></li>
+                        <li class="mb-2"><a href="#commitment" class="text-white text-decoration-none">Cam Kết</a></li>
+                        <li><a href="#contact" class="text-white text-decoration-none">Liên Hệ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4">
+                    <h4 class="mb-4">Thông Tin Liên Hệ</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-phone-alt me-2"></i> (+84) 87 9191 789</li>
+                        <li class="mb-2"><i class="fab fa-whatsapp me-2"></i> 087 9191 789</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> lap@web99vn.com</li>
+                        <li><i class="fas fa-globe me-2"></i> https://web99vn.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-light">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Web99. Tất cả quyền được bảo lưu.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Thiết kế bởi <a href="#" class="text-white text-decoration-none">Web99</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
